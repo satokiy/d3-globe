@@ -60,9 +60,9 @@
         .attr("stdDeviation", 1);
 
 
-      // // 地球を描画する
+      // 地球を描画する
       var countries = svg.selectAll("path")
-        .data(topojson.feature(topology, topology.objects.conuntries).features)
+        .data(topojson.feature(topology, topology.objects.countries).features)
         .enter().append("path")
         .attr("d", path)
         .attr("fill", "#69b3a2")
