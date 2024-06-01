@@ -20,7 +20,7 @@
 <body>
   <h1 style="text-align: center;">Globe</h1>
   <script>
-    d3.json('countries.topojson').then(function (topology) {
+    d3.json('topojson/output.topojson').then(function (topology) {
       // SVG要素を作成する
       var svg = d3.select("body").append("svg")
         .attr("width", "100%")
@@ -69,7 +69,7 @@
         .attr("filter", "url(#dropshadow)")
         .call(drag)
         .on("click", function (d) {
-          console.log(d.properties);
+          console.log(d);
         });
 
       function dragstarted() {
